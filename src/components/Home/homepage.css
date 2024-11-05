@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: mintcream;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Love Ya Like A Sister', cursive;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+.banner p {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.fa-shopping-cart {
+  font-size: 24px;
+}
+
+.nav_box {
+  width: 80%;
+  margin: auto;
+  display: flex;    
+  justify-content: space-between;
+  align-items: center;
+  line-height: 60px;
+  text-decoration: none !important;
+}
+
+.nav_box a, .my_shop, .others {
+  text-decoration: none; 
+}
+
+.nav_links {
+  display: flex;
+}
+
+.nav_links a {
+  margin: 0 15px;
+  font-weight: bold;
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.others {
+  color: black;
+}
+
+.my_shop {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none !important;
+  color: black;
+  font-family: 'Rock Salt', cursive;
+  cursor: pointer;
+}
+
+.cart {
+  cursor: pointer;
+}
+
+.cart span:nth-child(1) {
+  font-size: 2rem;
+  color: white;
+}
+
+.others {
+  text-decoration: none !important;
+}
+
+.cart span:nth-child(2) {
+  padding: 0 3px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  position: relative;
+  top: -15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    font-size: 2rem;
+    height: 200px;
+  }
+
+  .my_shop {
+    font-size: 1.5rem;
+  }
+
+  .nav_links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: whitesmoke;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  .nav_links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    font-size: 1.5rem;
+    height: 150px;
+  }
+
+  .my_shop {
+    font-size: 1.2rem;
+  }
+}

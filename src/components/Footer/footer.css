@@ -1,0 +1,73 @@
+footer {
+height: auto;
+/* padding: 2rem 0; */
+background-color: #f8f9fa;
+}
+.list-unstyled li {
+margin-top: 1rem;
+}
+  
+
+footer h5 {
+color: grey;
+cursor: pointer;
+font-size: 1.2rem;
+}
+
+footer a {
+color: rgb(0, 0, 0);
+text-decoration: none;
+}
+
+footer a:hover {
+color: rgb(0, 0, 0);
+}
+
+footer .social {
+margin-top: 1rem;
+margin-bottom: 1rem;
+justify-content: center;
+}
+
+footer .social a {
+font-size: 1.5rem;
+margin: 0 0.8rem;
+}
+
+footer .footer-email {
+margin-bottom: -0.1rem;
+font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+footer .social a {
+	font-size: 1.3rem;
+	margin: 0 0.5rem;
+}
+
+footer h5 {
+	font-size: 1rem;
+}
+
+footer p, footer a {
+	font-size: 0.85rem;
+}
+}
+
+@media (max-width: 576px) {
+footer h5 {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+footer .social {
+	justify-content: center;
+}
+
+footer .footer-email,
+footer .social,
+footer p {
+	text-align: center;
+}
+}
+  
